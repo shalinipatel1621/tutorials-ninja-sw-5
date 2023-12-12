@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Suite" verbose="1">
+    <listeners>
+        <listener class-name="com.tutorialsninja.demo.customlisteners.CustomListeners"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Smoke Test">
+        <groups>
+            <run>
+                <include name="smoke"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.tutorialsninja.demo.testsuite.MyAccountsTest"></class>
+            <class name="com.tutorialsninja.demo.testsuite.DesktopsTest"></class>
+            <class name="com.tutorialsninja.demo.testsuite.LaptopsAndNotebooksTest"></class>
+            <class name="com.tutorialsninja.demo.testsuite.TopMenuTest"></class>
+        </classes>
+    </test>
+</suite>
